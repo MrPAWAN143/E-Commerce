@@ -1,0 +1,120 @@
+*{
+  box-sizing: border-box;
+}
+html ,body{
+  margin: 0px;
+  padding: 0px;
+}
+
+
+.flex {
+  width: 1100px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 30px;
+
+}
+
+ul li {
+  padding: 10px 25px;
+  color: white;
+
+
+}
+/* 
+.dropdown-menu {
+  display: none;
+  height: 300px;
+  width: 600px;
+  position: absolute;
+  top: 50px;
+  padding: 0px 30px 30px 10px;
+} */
+
+.home:hover .dropdown-menu {
+  display: block;
+
+
+}
+
+.dropdown-item:hover {
+  background-color: transparent;
+
+
+}
+
+
+/* -------------------------------------------------- */
+.navvv {
+  width: 100%;
+  height:auto;
+
+
+}
+
+.logo {
+  height: auto;
+  width: 20%;
+  display: flex;
+  align-items: center;
+
+}
+
+
+nav {
+  background-color: rgb(185, 216, 239);
+
+}
+
+.nav-item Link::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: url(componentes/assest/icons/icons8-chevron-48.png);
+  top: 10px;
+  right: 5px;
+  position: absolute;
+  display: inline-block;
+  background-color: rebeccapurple;
+  
+}
+button:hover{
+}
+button:hover img{
+  opacity: 1 !important;
+}
+.item.active{
+  z-index: 2;
+}
+.bg1{
+ background-image: url('./componentes/assest/images/bg1.jpg');
+ background-size: cover;
+ background-position: center;
+}
+.bg2{
+ background-image: url('./componentes/assest/images/bg2.jpg');
+ background-size: cover;
+ background-position: center;
+}
+.bg3{
+ background-image: url('./componentes/assest/images/bg3.jpg');
+ background-size:cover;
+ background-position: center;
+
+}
+.bg4{
+ background-image: url('./componentes/assest/images/bg4.jpg');
+ background-size:cover;
+ background-position: center;
+
+}
+
+.dot.active{
+  width: 10px !important;
+  height: 10px !important;
+  background-color: rgb(84 38 179 / 53%) !important;
+
+}
