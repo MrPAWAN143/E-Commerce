@@ -1,12 +1,14 @@
 import React from 'react'
 import LeftArrow from './assest/icons/left-arrow.png'
 import RightArrow from './assest/icons/right-arrow.png'
+import Product from './Product'
+import ShowItems from './ShowItems'
 
 
 export default function Home() {
   const slider = {
-    width: '1180px',
-    height: '600px',
+    width: '1200px',
+    height: '550px',
     margin: 'auto',
     position: 'relative',
 
@@ -21,7 +23,7 @@ export default function Home() {
     width: '100%',
     height: '100%',
     position: 'absolute',
-    transition:'1s ease-in-out'
+    transition: '1s ease-in-out'
 
   }
 
@@ -61,13 +63,13 @@ export default function Home() {
     width: '150px',
     height: 'auto',
     position: 'absolute',
-    right:'50%',
-    
-    marginRight:'-75px',
-    display:'flex',
-    justifyContent:'space-between',
-    alignItems:'center',
-   
+    right: '50%',
+    top:'615px',
+    marginRight: '-75px',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+
 
   }
   const itemD = {
@@ -75,8 +77,15 @@ export default function Home() {
     height: '7px',
     borderRadius: '50%',
     backgroundColor: 'rgba(38, 59, 179, 0.769)',
-  
-  
+  }
+
+  const overlay = {
+    position: 'absolute',
+    left: '0px',
+    right: '0px',
+    top: '0px',
+    bottom: '0px',
+    backgroundColor: 'rgba(0, 0, 0, 0.4)'
 
   }
 
@@ -85,21 +94,21 @@ export default function Home() {
   function RightArrow1() {
     let item = document.querySelectorAll('.item')
     let itemActive = document.querySelectorAll('.dot')
-    let activedot =  0 
+    let activedot = 0
     let activeIndex = 0
 
-    for(let i = 0 ; i<itemActive.length;i++){
-      if(itemActive[i].classList.contains('active')){
+    for (let i = 0; i < itemActive.length; i++) {
+      if (itemActive[i].classList.contains('active')) {
         activedot = i
       }
       itemActive[i].classList.remove('active')
     }
-    
-    if(activedot == itemActive.length-1){
+
+    if (activedot == itemActive.length - 1) {
       activedot = 0
       itemActive[activedot].classList.add('active')
-    }else{
-      itemActive[activedot+1].classList.add('active')
+    } else {
+      itemActive[activedot + 1].classList.add('active')
     }
 
 
@@ -113,7 +122,7 @@ export default function Home() {
 
     if (activeIndex == item.length - 1) {
       activeIndex = 0
-      
+
 
       item[activeIndex].classList.add('active')
 
@@ -128,22 +137,22 @@ export default function Home() {
   function LeftArrow1() {
     let item = document.querySelectorAll('.item')
     let itemActive = document.querySelectorAll('.dot')
-    let activedot =  0 
+    let activedot = 0
     let activeIndex = 0
 
 
-    for(let i = 0 ; i<itemActive.length;i++){
-      if(itemActive[i].classList.contains('active')){
+    for (let i = 0; i < itemActive.length; i++) {
+      if (itemActive[i].classList.contains('active')) {
         activedot = i
       }
       itemActive[i].classList.remove('active')
     }
-    
-    if(activedot == 0){
-      activedot = itemActive.length-1
+
+    if (activedot == 0) {
+      activedot = itemActive.length - 1
       itemActive[activedot].classList.add('active')
-    }else{
-      itemActive[activedot-1].classList.add('active')
+    } else {
+      itemActive[activedot - 1].classList.add('active')
     }
 
     for (let i = 0; i < item.length; i++) {
@@ -165,49 +174,71 @@ export default function Home() {
 
   }
 
-  
+
 
   return (
 
-<>
+    <>
 
 
-    <div className='container-fluid'>
-      <div className=' slider' style={slider}>
-        <div className='ns-slider' style={nsSlider}>
-          <div className='item bg1' style={item}>
+      <div className='container-fluid'>
+        <div className=' slider' style={slider}>
+          <div className='ns-slider' style={nsSlider}>
+            <div className='item bg1 active' style={item}>
+              <div className='overlay' style={overlay}>
+                <h3>
+
+                </h3>
+
+              </div>
+            </div>
+            <div className='item bg2' style={item}>
+            <div className='overlay' style={overlay}>
+                <h3>
+
+                </h3>
+
+              </div>
+            </div>
+            <div className='item bg3 ' style={item}>
+            <div className='overlay' style={overlay}>
+                <h3>
+
+                </h3>
+
+              </div>
+            </div>
+            <div className='item bg4' style={item}>
+            <div className='overlay' style={overlay}>
+                <h3>
+
+                </h3>
+
+              </div>
+            </div>
+
 
           </div>
-          <div className='item bg2' style={item}>
+          <button className='sliderRight' style={sliderRight} onClick={RightArrow1}>
+            <img src={RightArrow} style={img} />
+          </button>
+          <button className='sliderLeft' style={sliderLeft} onClick={LeftArrow1}>
+            <img src={LeftArrow} style={img} />
+          </button>
+        </div>
 
-          </div>
-          <div className='item bg3 ' style={item}>
-
-          </div>
-          <div className='item bg4' style={item}>
-
-          </div>
-          
+        <div className='dottt mt-3' style={dottt}>
+          <div className='dot active' style={itemD}></div>
+          <div className='dot ' style={itemD}></div>
+          <div className='dot' style={itemD}></div>
+          <div className='dot' style={itemD}></div>
 
         </div>
-        <button className='sliderRight' style={sliderRight} onClick={RightArrow1}>
-          <img src={RightArrow} style={img} />
-        </button>
-        <button className='sliderLeft' style={sliderLeft} onClick={LeftArrow1}>
-          <img src={LeftArrow} style={img} />
-        </button>
       </div>
-      
-      <div className='dottt' style={dottt}>
-        <div className='dot active' style={itemD}></div>
-        <div className='dot ' style={itemD}></div>
-        <div className='dot' style={itemD}></div>
-        <div className='dot' style={itemD}></div>
 
-      </div>
-    </div>
+      <Product />
 
-
+    <ShowItems/>
 
 
     </>

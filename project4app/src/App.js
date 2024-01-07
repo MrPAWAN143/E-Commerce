@@ -10,7 +10,9 @@ import StoreLocator from './componentes/ Store-Locator';
 import More from './componentes/More';
 import UrlPage from './componentes/UrlPage';
 import NotFound from './componentes/NotFound';
-import Product from './componentes/Product';
+import ProductDetails from './componentes/ProductDetails';
+
+
 
 function App() {
   return (
@@ -54,6 +56,11 @@ function App() {
                     More
                   </Link>
                 </li>
+                <li className="nav-item">
+                  <Link to="/more" className="nav-link">
+                    Cart
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -67,6 +74,7 @@ function App() {
           <Route path='/store-locator' element={<StoreLocator/>}></Route>
           <Route path='/more' element={<More/>}></Route>
           <Route path='#' element={<NotFound/>}></Route>
+          <Route path='/products/:id' element={<ProductDetails/>}></Route>
           <Route path='/:urlpage' element={<UrlPage/>}></Route>
         </Routes>
 

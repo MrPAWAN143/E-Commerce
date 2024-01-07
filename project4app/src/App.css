@@ -1,11 +1,17 @@
-*{
+* {
   box-sizing: border-box;
 }
-html ,body{
+
+html,
+body {
   margin: 0px;
   padding: 0px;
 }
-
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+.position-absolute{
+top: 100px;
+}
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 .flex {
   width: 1100px;
@@ -24,6 +30,7 @@ ul li {
 
 
 }
+
 /* 
 .dropdown-menu {
   display: none;
@@ -50,7 +57,7 @@ ul li {
 /* -------------------------------------------------- */
 .navvv {
   width: 100%;
-  height:auto;
+  height: auto;
 
 
 }
@@ -65,8 +72,22 @@ ul li {
 
 
 nav {
+  width: 100% !important;
   background-color: rgb(185, 216, 239);
+  position: fixed !important;
+  top: 0px !important;
+  z-index: 6 !important;
 
+
+}
+
+.navbar-collapse {
+  margin-left: 100px !important;
+
+}
+
+.nav-item {
+  padding: 10px 15px !important;
 }
 
 .nav-item Link::after {
@@ -79,42 +100,195 @@ nav {
   position: absolute;
   display: inline-block;
   background-color: rebeccapurple;
-  
+
 }
-button:hover{
+
+.slider {
+  top: 75px !important;
 }
-button:hover img{
+
+button:hover {}
+
+button:hover img {
   opacity: 1 !important;
 }
-.item.active{
+
+.item.active {
   z-index: 2;
 }
-.bg1{
- background-image: url('./componentes/assest/images/bg1.jpg');
- background-size: cover;
- background-position: center;
-}
-.bg2{
- background-image: url('./componentes/assest/images/bg2.jpg');
- background-size: cover;
- background-position: center;
-}
-.bg3{
- background-image: url('./componentes/assest/images/bg3.jpg');
- background-size:cover;
- background-position: center;
 
-}
-.bg4{
- background-image: url('./componentes/assest/images/bg4.jpg');
- background-size:cover;
- background-position: center;
+.bg1 {
+  background-image: url('./componentes/assest/images/bg1.jpg');
+  background-size: cover;
+  background-position: center;
 
 }
 
-.dot.active{
+.bg2 {
+  background-image: url('./componentes/assest/images/bg2.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.bg3 {
+  background-image: url('./componentes/assest/images/bg3.jpg');
+  background-size: cover;
+  background-position: center;
+
+}
+
+.bg4 {
+  background-image: url('./componentes/assest/images/bg4.jpg');
+  background-size: cover;
+  background-position: center;
+
+}
+
+.dot.active {
+
   width: 10px !important;
   height: 10px !important;
   background-color: rgb(84 38 179 / 53%) !important;
 
+}
+
+
+.product {
+  width: 100%;
+  height: 640px;
+  margin: auto;
+  flex-wrap: wrap;
+  overflow: scroll;
+  margin-bottom: 10px;
+  margin-top: 100px !important;
+  padding-top: 30px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.product::-webkit-scrollbar {
+  display: none;
+}
+
+.items {
+  padding: 0px;
+  row-gap: 30px;
+}
+
+.box {
+  width: 25%;
+  height: 360px;
+  padding: 0px 20px;
+}
+
+
+
+
+.ns_items {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 0.5px solid;
+}
+
+.btn-light:hover {
+  color: rgb(255, 235, 235);
+  background-color: rgb(62, 79, 79);
+}
+
+.images {
+  width: 90%;
+  height: 50%;
+  margin: auto;
+
+}
+
+.images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.discripation {
+  width: 100%;
+  height: 40px;
+  overflow: hidden;
+  padding: 0px 10px;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.text-danger {
+  font-size: 14px;
+}
+
+.rating {
+  color: #06788c !important;
+}
+
+.proPrice {
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.aadtocart{
+  height: 40px;
+  top: 89%;
+  }
+  .aadtocartD{
+    top: 80%;
+  left: 575px;
+  }
+  .eachProduct{
+    margin-top: 100px;
+  }
+
+/* >>>>>>>>>>>>>>>>>>>>>.............>>>>>>>>>>>>>>>>>>>>........>>>>>>>>>>>>>>>>>>............ */
+/* ShowItems Css  */
+.showitems::-webkit-scrollbar {
+  display: none;
+}
+
+.showitems {
+  width: auto;
+  height: auto;
+  overflow: scroll;
+  margin-bottom: 100px;
+
+}
+
+.slidershow {
+  width: 200% !important;
+  height: 100%;
+
+
+}
+
+.item1 {
+  height: 800px;
+  width: 105% !important;
+}
+
+.item1 .row1 {
+  height: 400px !important;
+
+}
+
+.item1 .row2 {
+  height: 400px !important;
+
+}
+
+.item2 {
+  height: 800px;
+  width: 95% !important;
+
+}
+
+.item2 .row1 {
+  height: 400px !important;
+}
+
+.item2 .row2 {
+  height: 400px !important;
 }
