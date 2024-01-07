@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function  StoreLocator() {
+export default function Cart() {
   return (
     <div className='container position-absolute'>
-      <h1> Store Locator</h1>
+        <h1 className='display-1'> Cart</h1>
     </div>
   )
 }

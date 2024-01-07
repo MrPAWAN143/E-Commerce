@@ -11,6 +11,7 @@ import More from './componentes/More';
 import UrlPage from './componentes/UrlPage';
 import NotFound from './componentes/NotFound';
 import ProductDetails from './componentes/ProductDetails';
+import Cart from './componentes/Cart';
 
 
 
@@ -57,7 +58,7 @@ function App() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/more" className="nav-link">
+                  <Link to="/cart" className="nav-link">
                     Cart
                   </Link>
                 </li>
@@ -74,6 +75,7 @@ function App() {
           <Route path='/store-locator' element={<StoreLocator/>}></Route>
           <Route path='/more' element={<More/>}></Route>
           <Route path='#' element={<NotFound/>}></Route>
+          <Route path='/cart' element={<Cart/>}></Route>
           <Route path='/products/:id' element={<ProductDetails/>}></Route>
           <Route path='/:urlpage' element={<UrlPage/>}></Route>
         </Routes>

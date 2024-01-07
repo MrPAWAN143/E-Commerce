@@ -32,7 +32,6 @@ export default class Product extends Component {
                                 <span className='d-block mt-1 discripation'>{item.description}</span>
                                 <span className='d-inline-block mt-0 text-danger ps-2  me-5'>{'Price'+': ' + item.price + '$'}</span>
                                 <span className='d-inline-block mt-0 text-danger rating ps-2 ms-2'>{'Rating'+': ' + item.rating }</span>
-
                                 <button className='btn btn-primary aadtocart  d-block position-absolute w-100 rounded rounded-0'>+ Add To Card</button>
 
                             </div>
